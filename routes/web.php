@@ -21,7 +21,8 @@ Route::get('/', function () {
 Route::group(['prefix' => '/slider'],function(){
     Route::get('/add',[SliderController::class,'add'])->name('slider.add');
     Route::post('/store',[SliderController::class,'store'])->name('slider.store');
-    Route::get('/manage',[SliderController::class,'manage'])->name('slider.manage');
+    Route::get('/show',[SliderController::class,'show'])->name('slider.show');
+    Route::get('/destroy/{id}',[SliderController::class,'destroy'])->name('slider.destroy');
 });
 
 Route::get('/dashboard', function () {

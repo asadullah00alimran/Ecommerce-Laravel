@@ -17,7 +17,7 @@
                 </a><!-- br-menu-link -->
                 <ul class="br-menu-sub">
                     <li class="sub-item"><a href="{{ Route('slider.add') }}" class="sub-link">Add Slider</a></li>
-                    <li class="sub-item"><a href="{{ Route('slider.manage') }}" class="sub-link">Manage Slider</a></li>
+                    <li class="sub-item"><a href="{{ Route('slider.show') }}" class="sub-link">Manage Slider</a></li>
                 </ul>
             </li>
 
