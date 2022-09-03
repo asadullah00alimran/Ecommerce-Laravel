@@ -16,13 +16,13 @@
 
     <div class="br-pagebody">
         <div class="row row-sm">
-            <div class="col-md-3">
+            <div class="col-md-6 offset-md-3">
                 <!-- Validation Errors -->
-                <x-auth-validation-errors class="mb-3" :errors="$errors" />
-                <form action="{{route('slider.multistore')}}" method="POST" enctype="multipart/form-data">
+                <!-- <x-auth-validation-errors class="mb-3" :errors="$errors" /> -->
+                <form id="formimage" action="{{route('slider.multistore')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-3 form-group">
-                        <select name="slider_id" class="slider_id form-control":value="old('slider_id')" required>
+                        <select name="slider_id" class="slider_id form-control":value="old('slider_id')" >
                             <option value="">-------Select Slider-------</option>
                             @foreach($slider as $slider)
                             <option value="{{ $slider->id }}">{{$slider->title}}</option>
@@ -30,7 +30,7 @@
                         </select>
                     </div>
                     <div class="mt-3 form-group">
-                        <input type="file" name="pictures[]" class="pictures form-control" placeholder="Slider picture":value="old('picture')" required multiple>
+                        <input type="file" name="pictures[]" class="pictures form-control" placeholder="Slider picture":value="old('picture')" multiple>
                     </div>
                     <button class="add-image btn btn-success">Add Image</button>
                 </form>

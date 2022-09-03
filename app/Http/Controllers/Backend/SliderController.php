@@ -88,8 +88,10 @@ class SliderController extends Controller
                 $multi->slider_id = $request->slider_id;
                 $multi->picture = $customName;
                 $multi->save();
-
             }
+            return response()->json([
+                "success" => "ok"
+            ]);
         }
         return redirect()->route("slider.multi");
     }
